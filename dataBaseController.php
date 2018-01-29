@@ -36,7 +36,7 @@ function execEdit($getKey, $mode, $contents){
 		// 配列全体を置換
 		$compedit = array_replace($up, array("user".$getKey => $propedit));
 
-	// 配列をJSONに変換
+	// 配列をJSONに変換。生成したHASH値のエスケープとコードの整形もついでに
 	$result = json_encode($compedit, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 	// 既存のJSONファイルをリネームしてバックアップを行う
