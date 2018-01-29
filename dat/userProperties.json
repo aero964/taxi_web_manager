@@ -1,0 +1,82 @@
+{
+    "user0": {
+        "userName": "管理者権限モード",
+        "userID": "Administrator",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    },
+    "user1": {
+        "userName": "null株式会社",
+        "userID": "null-kk",
+        "password": "$2$test123hash",
+        "status": "true",
+        "status_date": "2018年01月01日 02時23分56秒",
+        "other": "その他備考"
+    },
+    "user2": {
+        "userName": "hogehoge株式会社",
+        "userID": "hogehoge",
+        "password": "$2$fugafugahash",
+        "status": "false",
+        "status_date": "2018年01月01日 02時24分59秒",
+        "other": "その他備考"
+    },
+    "user3": {
+        "userName": "サンプル株式会社",
+        "userID": "sample3",
+        "password": "null",
+        "status": "false",
+        "status_date": "2018年01月01日 02時20分47秒",
+        "other": "その他備考"
+    },
+    "user4": {
+        "userName": "サンプル株式会社",
+        "userID": "sample4",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    },
+    "user5": {
+        "userName": "サンプル株式会社",
+        "userID": "sample5",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    },
+    "user6": {
+        "userName": "サンプル株式会社",
+        "userID": "sample6",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    },
+    "user7": {
+        "userName": "サンプル株式会社",
+        "userID": "sample7",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    },
+    "user8": {
+        "userName": "サンプル株式会社",
+        "userID": "sample8",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    },
+    "user9": {
+        "userName": "サンプル株式会社",
+        "userID": "sample9",
+        "password": "null",
+        "status": "false",
+        "status_date": "null",
+        "other": "その他備考"
+    }
+}
