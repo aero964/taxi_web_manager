@@ -1,5 +1,5 @@
 <?php
-//jsonファイル新規発行モード 初回に実行して下さい。
+//jsonファイル発行モード データベースを作り直したいときに使用して下さい。
 function execCreateNewList(){
 
     $array = [];
