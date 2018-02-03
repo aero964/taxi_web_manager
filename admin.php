@@ -8,10 +8,10 @@ echo <<< EOM
 <!DOCTYPE html>
 <html>
 <head>
-    <title>taxi-web-manager</title>
+    <title>taxi_web_manager</title>
 </head>
 <body>
-<h2>taxi-web-manager</h2>
+<h2>taxi_web_manager</h2>
 <p>恐れ入りますが，ブラウザのバックボタンは使用しないで下さい。</p>
 <hr>
 EOM;
@@ -48,7 +48,7 @@ if(isset($_GET["edit"]) || isset($_SESSION['login'])){
         // パスワード変更モード
         if($_SESSION['administrator'] == true){
             execEdit($_SESSION['getKey'], "password", "password");
-            echo "<h3>[ID:".$_SESSION['getKey']."]のパスワードを初期パスワード[password]にリセットしました。変更内容をお伝え下さい。</h3><br>";
+            echo "<h3>[ID:".$_SESSION['getKey']."]のパスワードを初期パスワード[password]にリセットしました。変更内容を先方にお伝え下さい。</h3><br>";
         }else{
             editPassword();
             exit();
@@ -56,12 +56,12 @@ if(isset($_GET["edit"]) || isset($_SESSION['login'])){
 
     }else if(isset($_GET["Status"])){
 
-        // 配車受付状態変更モード
+        // サービス受付状態変更モード
         execEdit($_SESSION['getKey'], "status", $_GET["Status"]);
-        echo "<h3>配車受付状態を変更しました。</h3><br>";
+        echo "<h3>サービス受付状態を変更しました。</h3><br>";
     }else if(isset($_GET["Other"])){
 
-        // 備考欄変更モード
+        // 備考欄変更モード -> 将来的な用途で実装
         echo "備考欄変更モード";
         exit();
     }else if(isset($_GET["userID"])){
@@ -72,7 +72,7 @@ if(isset($_GET["edit"]) || isset($_SESSION['login'])){
     }
 }
 
-/* getメソッドに何も指定が無ければ，通常のログイン処理 */
+/* getメソッドに何も指定が無ければ，通常のログイン処理をおこなう*/
 
 // まずデータベースを読み出す
 $userProperties = file_get_contents("./dat/userProperties.json");
@@ -113,7 +113,7 @@ if( $login == $prep_userID && $password == $prep_password ){
 
     if($login == "Administrator"){
 
-        // Administrator -> 研究室用アカウント -> 管理者権限モードでログイン
+        // Administrator(管理者アカウント) -> 管理者権限モードでログイン
         $_SESSION['administrator'] = true;
     	echo "<br><strong style='color: red;'>Administratorアカウント - あなたには管理者権限が与えられています。<br>全ての情報のコントロールが出来るので，取り扱いには十分注意して下さい。</strong><a href='admin.php?logout'>[ログアウト]</a><hr>";
 		administratorViewAllUser($up);
